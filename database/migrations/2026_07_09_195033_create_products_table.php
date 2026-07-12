@@ -19,6 +19,7 @@ return new class extends Migration
         $table->string('name');
         $table->string('sku')->unique()->nullable(); // Código de barras ou identificador único do produto
         $table->integer('quantity');
+        $table->decimal('price', 8, 2)->nullable();
         $table->date('expiration_date'); // A data de validade que usaremos para o alerta!
             $table->timestamps();
         });
