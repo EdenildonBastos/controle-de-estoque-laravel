@@ -8,18 +8,29 @@ use App\Http\Controllers\DashboardController;
 //     return view('welcome');
 // });
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+//  // Rota que leva o usuario para tela inicial.
+ //Route::middleware(['auth', 'verified'])->group(function () {
+//      //Rota Raiz apontando para o painel de controle dinâmico
+//     //--> Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+ //     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');     
+//    //rotas existentes de Admin e Operador continuam abaixo...
+//  });// Mantém compatibilidade com o Breeze(fim da rota)
 
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    // Rota Raiz apontando para o painel de controle dinâmico
-    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/dashboard', [DashboardController::class, 'index']); // Mantém compatibilidade com o Breeze
-    
-    // Suas rotas existentes de Admin e Operador continuam abaixo...
+//1.Nessa rota qualquer usuário tem acesso a tela inicial, com os botões de Login/Registro
+Route::get('/', function () {
+    return view('welcome');
 });
+
+//2. ROTAS PROTEGIDAS: Só entra quem estiver cadastrado e verificado
+Route::middleware(['auth', 'verified'])->group(function () {
+    // Quando o usuário logar, ele vai para o /dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    
+    // Outras rotas do seu sistema que precisam de login ficam aqui dentro...
+});
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
