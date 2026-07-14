@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StockMaster - Gestão de Estoque Inteligente</title>
+    <title>StockController- Gestão de Estoque Inteligente</title>
     <!-- Tailwind via CDN para renderização imediata -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -16,17 +16,20 @@
         
         <!-- Ícone / Logo Simbólica -->
         <div class="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-indigo-600 text-white mb-6 shadow-lg shadow-indigo-600/30">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 6h13.5m-12 3h10.5M6.75 12h10.5m-9 3h7.5m-6 3h4.5" />
-            </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke-width="1.5"  stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.242 5.992h12m-12 6.003H20.24m-12 5.999h12M4.117 7.495v-3.75H2.99m1.125 3.75H2.99m1.125 0H5.24m-1.92 2.577a1.125 1.125 0 1 1 1.591 1.59l-1.83 1.83h2.16M2.99 15.745h1.125a1.125 1.125 0 0 1 0 2.25H3.74m0-.002h.375a1.125 1.125 0 0 1 0 2.25H2.99" />
+                </svg>
+            
+
         </div>
 
         <!-- Título e Subtítulo -->
         <h1 class="text-4xl font-extrabold tracking-tight text-white mb-2">
-            Stock<span class="text-indigo-400">Master</span>
+            Stock<span class="text-indigo-400">Controller</span>
         </h1>
         <p class="text-slate-400 text-sm mb-8 max-w-sm mx-auto">
-            Controle de inventário, relatórios dinâmicos e gerenciamento de produtos em um só lugar.
+            Controle e gerenciamento de produtos em um só lugar.
         </p>
 
         <!-- Ações de Autenticação -->
@@ -55,7 +58,7 @@
 
         <!-- Rodapé do Card -->
         <div class="mt-8 text-xs text-slate-500">
-            &copy; {{ date('Y') }} StockMaster. Todos os direitos reservados.
+            &copy; {{ date('Y') }} StockController. Todos os direitos reservados.
         </div>
     </div>
 
