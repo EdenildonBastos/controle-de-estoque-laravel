@@ -26,8 +26,11 @@
 
         <!-- Título e Subtítulo -->
         <h1 class="text-4xl font-extrabold tracking-tight text-white mb-2">
-            Stock<span class="text-indigo-400">Controller</span>
+             <span class="text-indigo-400">Bem-</span>vindo ao
         </h1>
+        <h2 class="text-3xl font-extrabold tracking-tight text-white mb-2">
+            Stock<span class="text-indigo-400">Controller</span>
+        </h2>
         <p class="text-slate-400 text-sm mb-8 max-w-sm mx-auto">
             Controle e gerenciamento de produtos em um só lugar.
         </p>

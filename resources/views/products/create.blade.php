@@ -107,6 +107,20 @@
                                class="w-full bg-slate-950/60 border border-slate-800 rounded-xl px-4 py-3.5 text-slate-100 text-sm focus:outline-hidden focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition font-medium placeholder:text-slate-600">
                     </div>
 
+
+                    {{-- categoria ao cadastrar o produto --}}
+                    
+                    {{-- <div class="space-y-2">
+                    <label for="category_id" class="text-xs font-bold uppercase tracking-wider text-slate-400 block">Categoria do Produto</label>
+                    <select name="category_id" id="category_id" class="w-full bg-slate-950/60 border border-slate-800 rounded-xl px-4 py-3.5 text-slate-100 text-sm focus:outline-hidden focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition font-medium placeholder:text-slate-600" required>
+                        <option value="" >Selecione uma categoria</option>
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                    </div> --}}
+                                
+
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <!-- Quantidade em Estoque -->
                         <div class="space-y-2">

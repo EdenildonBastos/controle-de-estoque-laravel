@@ -4,9 +4,6 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 
 //1.Nessa rota qualquer usuário tem acesso a tela inicial, com os botões de Login/Registro
@@ -18,7 +15,7 @@ Route::get('/', function () {
  // Rota que leva o usuario para tela inicial.
  Route::middleware(['auth', 'verified'])->group(function () {
      //Rota Raiz apontando para o painel de controle dinâmico
-     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    //Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
      Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');     
    //rotas existentes de Admin e Operador continuam abaixo...
  });// Mantém compatibilidade com o Breeze(fim da rota)
